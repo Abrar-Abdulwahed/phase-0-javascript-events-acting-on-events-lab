@@ -16,14 +16,14 @@ function moveDodgerLeft() {
   }
 }
 function moveDodgerRight() {
-  const frameWidth = dodger.parentElement.offsetWidth;
-  const dodgerWidth = dodger.offsetWidth;
-  const rightEdge = frameWidth - dodgerWidth;
-  
   const coordinate_px = dodger.style.left.replace("px", "");
   const coordinate = parseInt(coordinate_px, 10);
 
-  if (coordinate < rightEdge) {
+  // const frameWidth = dodger.parentElement.offsetWidth;
+  // const dodgerWidth = dodger.offsetWidth;
+  // const rightEdge = parseInt((frameWidth - dodgerWidth), 10);
+
+  if (coordinate < 360) {
     dodger.style.left = `${coordinate + 1}px`;
   }
 }
